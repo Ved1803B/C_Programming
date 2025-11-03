@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int sum_of_factors(int number)
+{
+    int i, sum = 0;
+
+    for(i = 1; i <= number / 2; i++)
+    {
+        if(number % i == 0)
+        {
+            sum = sum + i;  
+        }
+    }
+    return sum;
+}
+
+int main(void)
+{
+    int number;
+
+    printf("Enter number: ");
+    scanf("%d", &number);
+
+    printf("Sum of factors = %d\n", sum_of_factors(number));
+    return 0;
+}
